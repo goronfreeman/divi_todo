@@ -1,0 +1,28 @@
+<div class="signup-container">
+  <div class="signup-info">
+    <h2>Sign up for your free Todo by Divi account</h2>
+    <h4>For your daily whatever</h4>
+  </div>
+
+  <div class="signup-form container">
+    <%= form_for(:user, :url => session_path(:user)) do |f| %>
+      <div class="row">
+        <%= f.text_field :email, placeholder: 'Your email', class: 'column' %>
+      </div>
+
+      <div class="row">
+        <%= f.password_field :password, placeholder: 'Set a password', class: 'column' %>
+        <%= f.password_field :password_confirmation, placeholder: 'Confirm your password', class: 'column' %>
+      </div>
+      <%# f.check_box :remember_me %>
+      <%# f.label :remember_me %>
+      <%= f.submit 'Create account' %>
+      <%# link_to "Forgot your password?", new_password_path(:user) %>
+    <% end %>
+
+    <%= link_to 'Sign Up', new_user_registration_path, class: 'button button--orange' %>
+  </div>
+
+
+  <%# image_tag('clipboard.svg', class: 'clipboard') %>
+</div>
