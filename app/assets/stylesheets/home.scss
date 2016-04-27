@@ -19,7 +19,9 @@
   input[type='submit'] {
     background-color: $purple;
     border-color: $purple;
+    font-size: 1.4rem;
     margin: 1.6rem;
+    text-transform: none;
   }
 
   p {
