@@ -1,26 +1,45 @@
 .signup-container {
-  // background-image: linear-gradient(141deg, rgb(15, 184, 173) 0%, rgb(31, 200, 219) 51%, rgb(44, 181, 232) 75%);
-  background-color: #00bdf2;
-  background-image: url('background.png');
+  background-color: $blue;
+  background-image: url('signup-background.png');
   background-size: cover;
-  text-align: center;
+  color: #fff;
   padding: 8rem;
+  text-align: center;
+
+  h4 { opacity: .65; }
+
+  input[type='email'],
+  input[type='password'] {
+    background-color: #fff;
+    margin: 1.6rem;
+
+    &:focus { border-color: $purple; }
+  }
+
+  input[type='submit'] {
+    background-color: $purple;
+    border-color: $purple;
+    margin: 1.6rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin: 1.6rem;
+    opacity: .65;
+  }
+
+  a {
+    color: $purple;
+    text-decoration: underline;
+  }
 }
 
-.signup-info {
-  background-color: #00bdf2;
+.info-container {
+  color: #7c858e;
+  padding: 8rem;
+  position: relative;
+
+  h4 { color: #363945; }
 }
 
-.clipboard {
-  width: 50vw;
-}
-
-input[type='text'],
-input[type='password'] {
-  margin: 1.6rem;
-  background-color: #fff;
-}
-
-input[type='submit'] {
-  margin-top: 1.6rem;
-}
+.clipboard { height: 32rem; }

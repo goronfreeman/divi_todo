@@ -4,13 +4,9 @@
   padding: 1.6rem 3.2rem;
 }
 
-.logo {
-  height: 3.2rem;
-  float: left;
-}
+.logo { height: 3.2rem; }
 
-
-.social {
-  float: right;
-  margin-left: 3.2rem;
+.button.button-outline {
+  border-color: $purple;
+  color: $purple;
 }
