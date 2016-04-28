@@ -1,4 +1,6 @@
-<li>
+<li id="<%= list.id %>">
   <%= list.title %>
   <%= list.description %>
+
+  <%= link_to 'Done', list_path(list), method: 'delete', remote: true %>
 </li>
