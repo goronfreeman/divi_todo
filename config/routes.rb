@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'static_pages#home'
+  root 'lists#index'
 
   get ':action' => 'static_pages#:action'
+  get 'home', to: 'static_pages#home', as: :home
+
+  resources :lists
 end
