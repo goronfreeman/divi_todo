@@ -1,0 +1,19 @@
+<h1>My Lists</h1>
+
+<%= form_for List.new, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.text_field :title, autofocus: true, placeholder: 'title' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :description, placeholder: 'description' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Create List' %>
+  </div>
+<% end %>
+
+<ul>
+  <%= render @lists %>
+</ul>
