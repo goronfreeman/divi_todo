@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428004143) do
+ActiveRecord::Schema.define(version: 20160428005530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "items", force: :cascade do |t|
+    t.string  "title"
+    t.text    "description"
+    t.integer "state"
+    t.integer "list_id"
+  end
+
+  add_index "items", ["list_id"], name: "index_items_on_list_id", using: :btree
 
   create_table "lists", force: :cascade do |t|
     t.string  "title"
@@ -42,5 +51,6 @@ ActiveRecord::Schema.define(version: 20160428004143) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "items", "lists"
   add_foreign_key "lists", "users"
 end
