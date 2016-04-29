@@ -1,1 +1,5 @@
-$('ul').append("<%= j render partial: 'list', locals: {list: @list} %>");
+$('.lists').append("<%= j render partial: 'list', locals: {list: @list} %>");
+
+$('.list').last().hide().show('normal');
+
+$('#title, #description').val('');

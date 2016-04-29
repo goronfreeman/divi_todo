@@ -1,1 +1,6 @@
-$("li#<%= @list.id %>").slideUp();
+$(".list#<%= @list.id %>").animate({
+  right: '200px',
+  opacity: 0
+}, function() {
+    $(this).remove();
+});
