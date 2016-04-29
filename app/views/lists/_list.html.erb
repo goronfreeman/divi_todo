@@ -1,6 +1,6 @@
-<li id="<%= list.id %>">
-  <%= list.title %>
-  <%= list.description %>
+    <div class="list" id="<%= list.id %>">
+      <h4><%= list.title %></h4>
+      <p><%= list.description %></p>
 
-  <%= link_to 'Done', list_path(list), method: 'delete', remote: true %>
-</li>
+      <%= link_to (image_tag ('check.svg'), class: 'check'), list_path(list), method: 'delete', remote: true %>
+    </div>
