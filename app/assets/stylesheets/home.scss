@@ -8,22 +8,6 @@
 
   h4 { opacity: .65; }
 
-  input[type='email'],
-  input[type='password'] {
-    background-color: #fff;
-    margin: 1.6rem;
-
-    &:focus { border-color: $purple; }
-  }
-
-  input[type='submit'] {
-    background-color: $purple;
-    border-color: $purple;
-    font-size: 1.4rem;
-    margin: 1.6rem;
-    text-transform: none;
-  }
-
   p {
     font-size: 1.4rem;
     margin: 1.6rem;
