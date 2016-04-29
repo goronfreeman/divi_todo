@@ -24,7 +24,7 @@
           <%= f.submit 'Create account', class: 'column' %>
         </div>
 
-        <p>By clicking this button, you agree to our <%= link_to 'Terms of Service', '/tos' %>.</p>
+        <p>By clicking this button, you agree to our <%= link_to 'Terms of Service', '/tos', target: '_blank' %>.</p>
       <% end %>
 
     </div>
@@ -67,3 +67,5 @@
   </div>
 
 </div>
+
+<%= render 'layouts/footer' %>
