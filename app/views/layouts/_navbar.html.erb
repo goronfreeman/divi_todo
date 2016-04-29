@@ -1,5 +1,9 @@
 <nav class="navbar">
   <%= image_tag('logo.png', class: 'logo float-left', alt: 'DIVI') %>
 
-  <%= link_to 'Login', new_user_session_path, class: 'button button-outline float-right' %>
+  <% if user_signed_in? %>
+    <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'button button-outline float-right' %>
+  <% else %>
+    <%= link_to 'Login', new_user_session_path, class: 'button button-outline float-right' %>
+  <% end %>
 </nav>
