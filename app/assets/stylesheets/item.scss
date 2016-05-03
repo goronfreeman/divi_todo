@@ -1,3 +1,10 @@
 .item {
   margin: 1rem;
 }
+
+.item-title,
+.item-description { display: inline;}
+
+.item-description { font-style: italic;}
+
+.item-state { margin-bottom: .5rem; }
