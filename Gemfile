@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'factory_girl_rails'
 gem 'devise'
 gem 'faker'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'byebug'
