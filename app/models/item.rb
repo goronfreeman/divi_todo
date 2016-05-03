@@ -3,5 +3,5 @@ class Item < ActiveRecord::Base
 
   belongs_to :list
 
-  validates :title, :state, presence: true
+  validates :title, :state, :list_id, presence: true
 end

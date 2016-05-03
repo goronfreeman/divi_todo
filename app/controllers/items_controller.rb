@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create!(item_params)
+    @item = Item.create(item_params)
     @item.list_id = params[:list_id]
 
     @item.save
