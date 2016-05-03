@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get ':action' => 'static_pages#:action'
   get 'home', to: 'static_pages#home', as: :home
 
-  resources :lists
+  resources :lists do
+    resources :items
+  end
 end
