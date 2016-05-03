@@ -2,16 +2,7 @@
   <div class="container">
 
     <div class="form">
-      <%= form_for :list, url: lists_path, remote: true do |f| %>
-        <div class="row">
-          <%= f.text_field :title, autofocus: true, placeholder: 'title', required: true, class: 'column', id: 'title' %>
-          <%= f.text_field :description, placeholder: 'description (optional)', class: 'column', id: 'description' %>
-        </div>
-
-        <div class="row">
-          <%= f.submit 'Create List', class: 'column' %>
-        </div>
-      <% end %>
+      <%= render 'form' %>
     </div>
   </div>
 
