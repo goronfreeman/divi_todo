@@ -4,7 +4,7 @@ By [Hunter Braun](https://github.com/goronfreeman)
 
 TODOs made easy.
 
-[Click here](todo-by-divi.herokuapp.com) for a live preview! This is the easiest way to get started.
+[Click here](http://todo-by-divi.herokuapp.com) for a live preview! This is the easiest way to get started.
 
 ## Setup
 
