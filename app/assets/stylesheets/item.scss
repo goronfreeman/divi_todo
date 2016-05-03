@@ -8,3 +8,10 @@
 .item-description { font-style: italic;}
 
 .item-state { margin-bottom: .5rem; }
+
+.delete {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.item:hover .delete { opacity: 1; }

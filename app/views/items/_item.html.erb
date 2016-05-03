@@ -1,8 +1,7 @@
 <div class="item" id="item-<%= item.id %>">
-  <h5><%= item.title %></h5>
-  <p><%= item.description %></p>
-  <p><%= item.state.humanize %></p>
+  <h5 class="item-title"><%= item.title %></h5>
+  <p class="item-description"><%= item.description %></p>
+  <p class="item-state"><%= item.state.humanize %></p>
 
-  <%= link_to (image_tag ('edit.svg')), edit_list_item_path(item.list, item), remote: true %>
-  <%= link_to (image_tag ('delete.svg')), list_item_path(item.list, item), method: 'delete', remote: true %>
+  <%= link_to (image_tag ('delete.svg')), list_item_path(item.list, item), method: 'delete', remote: true, class: 'delete' %>
 </div>
