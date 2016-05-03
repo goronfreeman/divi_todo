@@ -1,0 +1,14 @@
+<%= form_for [list, list.items.build], remote: true do |f| %>
+  <div class="row">
+    <%= f.text_field :title, autofocus: true, placeholder: 'title', required: true, class: 'column', id: 'title' %>
+    <%= f.text_field :description, placeholder: 'description (optional)', class: 'column', id: 'description' %>
+  </div>
+
+  <div class="row">
+    <%= f.select :state, Item.states.map { |key, value| [key.humanize, key] }, class: 'column' %>
+  </div>
+
+  <div class="row">
+    <%= f.submit 'Create Item', class: 'column' %>
+  </div>
+<% end %>

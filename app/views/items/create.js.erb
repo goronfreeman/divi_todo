@@ -1,1 +1,5 @@
-$('.list-items').append("<%= j render partial: 'item', locals: {item: @item, list: @list} %>");
+$("#list-<%= @list.id %> > .list-items").append("<%= j render partial: 'items/item', locals: {item: @item, list: @list} %>");
+
+$('.item').last().hide().show('normal');
+
+$('#title, #description').val('');

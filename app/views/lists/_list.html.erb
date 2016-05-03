@@ -1,28 +1,19 @@
-<div class="list" id="<%= list.id %>">
+<div class="list" id="list-<%= list.id %>">
   <h4><%= list.title %></h4>
   <p><%= list.description %></p>
 
   <div class="list-items">
-    <%= render partial: 'items/item', locals: { list: list } %>
+    <% list.items.each do |item| %>
+      <%= render partial: 'items/item', locals: { item: item } %>
+    <% end %>
   </div>
 
   <p class="timestamp">Edited <%= list.updated_at.strftime('%b %-d') %></p>
 
+  <%# link_to 'Add Item', new_list_item_path(list), remote: true %>
+
   <div class="form">
-    <%= form_for [list, Item.new], remote: true do |f| %>
-      <div class="row">
-        <%= f.text_field :title, autofocus: true, placeholder: 'title', required: true, class: 'column', id: 'title' %>
-        <%= f.text_field :description, placeholder: 'description (optional)', class: 'column', id: 'description' %>
-      </div>
-
-      <div class="row">
-        <%= f.select :state, Item.states.map { |key, value| [key.humanize, key] }, class: 'column' %>
-      </div>
-
-      <div class="row">
-        <%= f.submit 'Create Item', class: 'column' %>
-      </div>
-    <% end %>
+    <%= render partial: 'items/form', locals: { list: list } %>
   </div>
 
   <%= link_to (image_tag ('check.svg'), class: 'check'), list_path(list), method: 'delete', remote: true %>
