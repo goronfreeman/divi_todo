@@ -50,3 +50,7 @@ You can run the RSpec test suite inside the project directory with:
 ```console
 rspec
 ```
+
+## Notes
+
+TODO was made utilizing Rails built-in AJAX functionality in order to create a single page experience with no need for page refreshes.
